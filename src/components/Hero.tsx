@@ -55,11 +55,11 @@ export const Hero: React.FC = () => {
             {t.hero.subtitle}
           </p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-3.5 mb-10 sm:mb-12">
+          {/* Action Buttons: Same width on mobile, auto width on desktop */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3.5 mb-8 sm:mb-12">
             <a
               href="#rooms"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-brand-gold hover:bg-brand-gold-hover text-white font-medium text-sm sm:text-base shadow-sm transition-all hover:shadow hover:-translate-y-0.5 active:translate-y-0"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-brand-gold hover:bg-brand-gold-hover text-white font-medium text-sm sm:text-base shadow-sm transition-all hover:shadow hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>{t.hero.exploreRooms}</span>
               <ArrowRight className={`w-4 h-4 ml-2 rtl:mr-2 rtl:ml-0 ${isRtl ? 'rotate-180' : ''}`} />
@@ -68,55 +68,55 @@ export const Hero: React.FC = () => {
             <button
               onClick={handleWhatsAppGeneral}
               type="button"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white/90 hover:bg-white text-brand-dark border border-brand-border/80 font-medium text-sm sm:text-base shadow-2xs transition-all hover:shadow hover:-translate-y-0.5 active:translate-y-0"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white/95 hover:bg-white text-brand-dark border border-brand-border/80 font-medium text-sm sm:text-base shadow-2xs transition-all hover:shadow hover:-translate-y-0.5 active:translate-y-0"
             >
               <WhatsAppIcon className="w-4 h-4 mr-2 rtl:ml-2 rtl:mr-0 text-[#25D366]" />
               <span>{t.hero.enquireWhatsapp}</span>
             </button>
           </div>
 
-          {/* 3 Highlight Cards Row (Matching Reference Screenshot) */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {/* 3 Highlight Cards: 3-column side-by-side compact tiles on mobile and desktop */}
+          <div className="grid grid-cols-3 gap-2 sm:gap-3">
             {/* Highlight 1: Comfortable Rooms */}
-            <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-brand-cream/90 backdrop-blur-xs border border-brand-border/80 shadow-2xs">
-              <div className="w-10 h-10 rounded-full bg-brand-sand/50 border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
-                <Bed className="w-4 h-4" />
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left rtl:sm:text-right gap-1.5 sm:gap-3 p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-brand-cream/90 backdrop-blur-xs border border-brand-border/80 shadow-2xs min-h-[84px] sm:min-h-0 justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-brand-sand/50 border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
+                <Bed className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
-              <div className="min-w-0">
-                <p className="text-xs sm:text-sm font-bold text-brand-dark leading-snug truncate">
+              <div className="min-w-0 w-full">
+                <p className="text-[11px] sm:text-sm font-bold text-brand-dark leading-tight line-clamp-2 sm:truncate">
                   {t.hero.highlights.comfortableRooms}
                 </p>
-                <p className="text-[11px] text-brand-muted truncate">
+                <p className="hidden sm:block text-[11px] text-brand-muted truncate mt-0.5">
                   {t.hero.highlights.comfortableRoomsSub}
                 </p>
               </div>
             </div>
 
             {/* Highlight 2: Convenient Location */}
-            <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-brand-cream/90 backdrop-blur-xs border border-brand-border/80 shadow-2xs">
-              <div className="w-10 h-10 rounded-full bg-brand-sand/50 border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
-                <MapPin className="w-4 h-4" />
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left rtl:sm:text-right gap-1.5 sm:gap-3 p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-brand-cream/90 backdrop-blur-xs border border-brand-border/80 shadow-2xs min-h-[84px] sm:min-h-0 justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-brand-sand/50 border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
+                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
-              <div className="min-w-0">
-                <p className="text-xs sm:text-sm font-bold text-brand-dark leading-snug truncate">
+              <div className="min-w-0 w-full">
+                <p className="text-[11px] sm:text-sm font-bold text-brand-dark leading-tight line-clamp-2 sm:truncate">
                   {t.hero.highlights.convenientLocation}
                 </p>
-                <p className="text-[11px] text-brand-muted truncate">
+                <p className="hidden sm:block text-[11px] text-brand-muted truncate mt-0.5">
                   {t.hero.highlights.convenientLocationSub}
                 </p>
               </div>
             </div>
 
             {/* Highlight 3: Welcoming Hospitality */}
-            <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-brand-cream/90 backdrop-blur-xs border border-brand-border/80 shadow-2xs">
-              <div className="w-10 h-10 rounded-full bg-brand-sand/50 border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
-                <Users className="w-4 h-4" />
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left rtl:sm:text-right gap-1.5 sm:gap-3 p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-brand-cream/90 backdrop-blur-xs border border-brand-border/80 shadow-2xs min-h-[84px] sm:min-h-0 justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-brand-sand/50 border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
+                <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
-              <div className="min-w-0">
-                <p className="text-xs sm:text-sm font-bold text-brand-dark leading-snug truncate">
+              <div className="min-w-0 w-full">
+                <p className="text-[11px] sm:text-sm font-bold text-brand-dark leading-tight line-clamp-2 sm:truncate">
                   {t.hero.highlights.welcomingHospitality}
                 </p>
-                <p className="text-[11px] text-brand-muted truncate">
+                <p className="hidden sm:block text-[11px] text-brand-muted truncate mt-0.5">
                   {t.hero.highlights.welcomingHospitalitySub}
                 </p>
               </div>
