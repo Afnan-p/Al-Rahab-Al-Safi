@@ -92,15 +92,15 @@ export const LocationSection: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="relative rounded-3xl overflow-hidden border border-brand-border shadow-card bg-brand-sand/20">
               {/* Top Floating Badge */}
-              <div className="absolute top-4 left-4 right-4 z-10 pointer-events-none flex items-center justify-between">
-                <div className="px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-md shadow-soft border border-brand-border flex items-center gap-2 pointer-events-auto">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-xs font-bold text-brand-forest">
+              <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 z-10 pointer-events-none flex flex-wrap gap-2 items-center justify-between">
+                <div className="px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-md shadow-soft border border-brand-border flex items-center gap-1.5 sm:gap-2 pointer-events-auto max-w-[65%] sm:max-w-none">
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                  <span className="text-[11px] sm:text-xs font-bold text-brand-forest truncate">
                     {lang === 'ar' ? BRAND_CONFIG.nameAr : BRAND_CONFIG.nameEn}
                   </span>
                 </div>
 
-                <div className="px-3 py-1.5 rounded-xl bg-brand-forest/90 text-white backdrop-blur-md shadow-soft flex items-center gap-1.5 text-xs font-semibold pointer-events-auto">
+                <div className="px-2.5 sm:px-3 py-1.5 rounded-xl bg-brand-forest/90 text-white backdrop-blur-md shadow-soft flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold pointer-events-auto shrink-0">
                   <Compass className="w-3.5 h-3.5 text-brand-gold" />
                   <span>{lang === 'ar' ? 'حي السقيا، المدينة' : 'Al Suqya, Madinah'}</span>
                 </div>

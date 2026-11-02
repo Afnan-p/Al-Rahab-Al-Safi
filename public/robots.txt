@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://al-rahab-al-safi.vercel.app/sitemap.xml
