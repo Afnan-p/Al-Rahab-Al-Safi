@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  
+  [dir="rtl"] {
+    font-family: 'Cairo', 'Amiri', system-ui, sans-serif;
+  }
+
+  [dir="rtl"] .font-serif {
+    font-family: 'Amiri', 'Cairo', serif;
+  }
+
+  [dir="ltr"] {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  [dir="ltr"] .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5C4A7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B28444;
+}
+
+/* Subtle image zoom on hover */
+.img-zoom-wrapper {
+  overflow: hidden;
+}
+.img-zoom-wrapper img {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.img-zoom-wrapper:hover img {
+  transform: scale(1.05);
+}
