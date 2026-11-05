@@ -25,18 +25,16 @@ export const Hero: React.FC = () => {
         <img
           src="/images/hero-building.jpg"
           alt="Hostel Al-Rahab Al-Safi Building in Madinah"
-          className={`w-full h-full object-cover object-[center_32%] lg:object-[62%_32%] transition-transform duration-700 ease-in-out ${
-            isRtl ? '-scale-x-100' : 'scale-x-100'
-          }`}
+          className="w-full h-full object-cover object-[center_52%] sm:object-[center_48%] lg:object-[center_50%] transition-transform duration-700 ease-in-out"
           loading="eager"
         />
 
-        {/* Soft whitish shade on the text side only (left in EN, right in AR) - fades to 100% transparent to keep the building completely crisp, clear, and vibrant */}
+        {/* Soft whitish shade on the text side only (left in EN, right in AR) - fades to transparent to keep the building crisp and vibrant */}
         <div 
           className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
             isRtl 
-              ? 'bg-gradient-to-l from-white/95 via-white/80 via-36% lg:via-40% to-transparent' 
-              : 'bg-gradient-to-r from-white/95 via-white/80 via-36% lg:via-40% to-transparent'
+              ? 'bg-gradient-to-l from-white/95 via-white/85 sm:via-white/80 via-45% lg:via-40% to-white/60 sm:to-transparent' 
+              : 'bg-gradient-to-r from-white/95 via-white/85 sm:via-white/80 via-45% lg:via-40% to-white/60 sm:to-transparent'
           }`} 
         />
         {/* Subtle narrow bottom edge blend into next section */}
