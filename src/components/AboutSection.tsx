@@ -26,7 +26,7 @@ export const AboutSection: React.FC = () => {
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-border">
               <img
                 src="/about-building.jpg"
-                alt="Hostel Al-Rahab Al-Safi Building Exterior and Architecture"
+                alt="Hostel Al-Rehab Al-Safi Building Exterior and Architecture"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
                 loading="lazy"
               />
@@ -35,7 +35,7 @@ export const AboutSection: React.FC = () => {
               {/* Bottom decorative badge */}
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 shadow-soft">
                 <p className="text-xs font-semibold text-brand-forest uppercase tracking-wider mb-0.5">
-                  {lang === 'ar' ? 'نزل الرحاب الصافي' : 'Hostel Al-Rahab Al-Safi Accommodation'}
+                  {lang === 'ar' ? 'نزل الرحاب الصافي' : 'Hostel Al-Rehab Al-Safi Accommodation'}
                 </p>
                 <p className="text-[11px] text-brand-muted">
                   {lang === 'ar' ? 'المدينة المنورة • ضيافة ترقى لتطلعاتكم' : 'Madinah, Saudi Arabia • Welcoming all travelers'}

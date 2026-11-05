@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="/images/hero-building.jpg"
-          alt="Hostel Al-Rahab Al-Safi Building in Madinah"
+          alt="Hostel Al-Rehab Al-Safi Building in Madinah"
           className="w-full h-full object-cover object-[center_52%] sm:object-[center_48%] lg:object-[center_50%] transition-transform duration-700 ease-in-out"
           loading="eager"
         />

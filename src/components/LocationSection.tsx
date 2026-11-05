@@ -8,7 +8,7 @@ export const LocationSection: React.FC = () => {
   const t = CONTENT_TRANSLATIONS[lang];
 
   // Verified coordinates from official client Google Maps place link:
-  // Place: دار الرحاب الصافي (Hostel Al-Rahab Al-Safi), Al Suqya, Madinah
+  // Place: دار الرحاب الصافي (Hostel Al-Rehab Al-Safi), Al Suqya, Madinah
   const mapEmbedUrl = `https://maps.google.com/maps?q=${BRAND_CONFIG.coordinates.lat},${BRAND_CONFIG.coordinates.lng}&hl=${lang === 'ar' ? 'ar' : 'en'}&z=16&output=embed`;
 
   return (
@@ -109,7 +109,7 @@ export const LocationSection: React.FC = () => {
               {/* Real Interactive Google Maps Iframe */}
               <div className="relative h-[340px] sm:h-[420px] w-full">
                 <iframe
-                  title="Hostel Al-Rahab Al-Safi Location Map"
+                  title="Hostel Al-Rehab Al-Safi Location Map"
                   src={mapEmbedUrl}
                   width="100%"
                   height="100%"

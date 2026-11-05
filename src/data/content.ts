@@ -1,7 +1,7 @@
-// Configuration for Hostel Al-Rahab Al-Safi (نزل الرحاب الصافي)
+// Configuration for Hostel Al-Rehab Al-Safi (نزل الرحاب الصافي)
 // Easily edit brand names, contact info, and WhatsApp number here
 export const BRAND_CONFIG = {
-  nameEn: 'Hostel Al-Rahab Al-Safi',
+  nameEn: 'Hostel Al-Rehab Al-Safi',
   nameAr: 'نزل الرحاب الصافي',
   taglineEn: 'Comfort • Peace • Hospitality',
   taglineAr: 'راحة • سكينة • ضيافة طيبة',
@@ -310,7 +310,7 @@ export const CONTENT_TRANSLATIONS = {
     about: {
       badge: 'ABOUT US',
       title: 'A Peaceful Stay in the Heart of Madinah',
-      p1: 'Welcome to Hostel Al-Rahab Al-Safi (نزل الرحاب الصافي), where we provide clean, comfortable, and well-maintained accommodation for visitors to the blessed city of Madinah.',
+      p1: 'Welcome to Hostel Al-Rehab Al-Safi (نزل الرحاب الصافي), where we provide clean, comfortable, and well-maintained accommodation for visitors to the blessed city of Madinah.',
       p2: 'Whether you are arriving for Hajj, Umrah, or personal travel, our goal is to offer a tranquil, trustworthy home away from home with genuine Saudi hospitality and caring service.',
       feature1Title: 'Clean & Well Maintained',
       feature1Desc: 'Strict hygiene protocols and fresh linens in every room.',
@@ -325,7 +325,7 @@ export const CONTENT_TRANSLATIONS = {
       title: 'Location & Accessibility',
       subtitle: 'Located in the historic Al Suqya district in Madinah with convenient access to Al-Masjid an-Nabawi, transportation, shops, and restaurants.',
       viewGoogleMaps: 'Open in Google Maps',
-      ourLocationTitle: 'Hostel Al-Rahab Al-Safi',
+      ourLocationTitle: 'Hostel Al-Rehab Al-Safi',
       ourLocationSub: 'Al Suqya District, Madinah 42315',
       centralArea: 'Al Suqya District, Madinah',
       addressLine: 'Al Suqya, Madinah 42315, Saudi Arabia',
@@ -388,7 +388,7 @@ export const CONTENT_TRANSLATIONS = {
       bookingPolicy: 'Booking & Cancellation Terms',
       guestRules: 'Guest Guidelines',
       copyright: 'All rights reserved.',
-      disclaimer: 'Official accommodation platform for Hostel Al-Rahab Al-Safi (نزل الرحاب الصافي), Madinah, Saudi Arabia.',
+      disclaimer: 'Official accommodation platform for Hostel Al-Rehab Al-Safi (نزل الرحاب الصافي), Madinah, Saudi Arabia.',
     },
     // Policies Modal
     policiesModal: {
@@ -496,7 +496,7 @@ export const CONTENT_TRANSLATIONS = {
     about: {
       badge: 'عن النزل',
       title: 'إقامة هادئة ومطمئنة في قلب المدينة المنورة',
-      p1: 'أهلاً بكم في نزل الرحاب الصافي (Hostel Al-Rahab Al-Safi)، وجهتكم لإقامة مريحة، نظيفة، وموثوقة لضيوف وزوار مدينة رسول الله صلى الله عليه وسلم.',
+      p1: 'أهلاً بكم في نزل الرحاب الصافي (Hostel Al-Rehab Al-Safi)، وجهتكم لإقامة مريحة، نظيفة، وموثوقة لضيوف وزوار مدينة رسول الله صلى الله عليه وسلم.',
       p2: 'سواء كنتم في زيارة لأداء مناسك العمرة، أو الحج، أو رحلة خاصة مع العائلة، نحرص على تقديم ضيافة سعودية أصيلة، وبيئة هادئة ومرتبة تشعركم بالدفء والراحة.',
       feature1Title: 'نظافة وعناية مستمرة',
       feature1Desc: 'إجراءات تعقيم دقيقة وتغيير دوري للمفارش وتجهيزات الحمام.',
@@ -574,7 +574,7 @@ export const CONTENT_TRANSLATIONS = {
       bookingPolicy: 'شروط الحجز والإلغاء',
       guestRules: 'إرشادات النزلاء',
       copyright: 'جميع الحقوق محفوظة.',
-      disclaimer: 'المنصة الرسمية لنزل الرحاب الصافي (Hostel Al-Rahab Al-Safi) في المدينة المنورة، المملكة العربية السعودية.',
+      disclaimer: 'المنصة الرسمية لنزل الرحاب الصافي (Hostel Al-Rehab Al-Safi) في المدينة المنورة، المملكة العربية السعودية.',
     },
     // Policies Modal
     policiesModal: {
