@@ -33,8 +33,8 @@ export const Hero: React.FC = () => {
         <div 
           className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
             isRtl 
-              ? 'bg-gradient-to-l from-white/95 via-white/85 sm:via-white/80 via-45% lg:via-40% to-white/60 sm:to-transparent' 
-              : 'bg-gradient-to-r from-white/95 via-white/85 sm:via-white/80 via-45% lg:via-40% to-white/60 sm:to-transparent'
+              ? 'bg-gradient-to-l from-white/65 via-white/30 via-35% lg:via-28% to-transparent' 
+              : 'bg-gradient-to-r from-white/65 via-white/30 via-35% lg:via-28% to-transparent'
           }`} 
         />
         {/* Subtle narrow bottom edge blend into next section */}
@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg text-brand-dark/75 font-normal leading-relaxed mb-8 max-w-xl">
+          <p className="text-base sm:text-lg text-brand-dark/90 font-normal leading-relaxed mb-8 max-w-xl">
             {t.hero.subtitle}
           </p>
 

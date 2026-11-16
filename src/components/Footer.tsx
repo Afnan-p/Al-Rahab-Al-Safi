@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicies }) => {
   return (
     <footer className="bg-brand-forest-deep text-white/80 border-t border-brand-border/20 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-white/10">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicies }) => {
               <button
                 onClick={toggleLang}
                 type="button"
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/15 text-xs text-white transition-colors"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/15 text-xs text-white transition-colors cursor-pointer"
               >
                 <Globe className="w-3.5 h-3.5 text-brand-gold" />
                 <span>{lang === 'en' ? 'التحويل إلى العربية' : 'Switch to English'}</span>
@@ -54,112 +54,124 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicies }) => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider">
-              {t.footer.quickLinks}
-            </h4>
-            <ul className="space-y-2 text-xs sm:text-sm">
-              <li>
-                <a href="#home" className="hover:text-brand-gold transition-colors">
-                  {t.nav.home}
-                </a>
-              </li>
-              <li>
-                <a href="#rooms" className="hover:text-brand-gold transition-colors">
-                  {t.nav.rooms}
-                </a>
-              </li>
-              <li>
-                <a href="#facilities" className="hover:text-brand-gold transition-colors">
-                  {t.nav.facilities}
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-brand-gold transition-colors">
-                  {t.nav.about}
-                </a>
-              </li>
-              <li>
-                <a href="#location" className="hover:text-brand-gold transition-colors">
-                  {t.nav.location}
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-brand-gold transition-colors">
-                  {t.nav.contact}
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Responsive 3 Boxes Wrapper: on mobile (< md) 3 stacked boxes, on tablet (md) 3 grid boxes, on desktop (lg) 8-col classic footer columns */}
+          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-8 gap-4 md:gap-5 lg:gap-10">
+            {/* Box 1: Quick Links */}
+            <div className="rounded-2xl bg-white/[0.04] border border-white/10 p-5 lg:p-0 lg:rounded-none lg:bg-transparent lg:border-0 lg:col-span-2 space-y-3">
+              <div className="flex items-center gap-2 pb-2.5 mb-1 border-b border-white/10 lg:border-b-0 lg:pb-0 lg:mb-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold lg:hidden"></span>
+                <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider">
+                  {t.footer.quickLinks}
+                </h4>
+              </div>
+              <ul className="space-y-2 text-xs sm:text-sm">
+                <li>
+                  <a href="#home" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {t.nav.home}
+                  </a>
+                </li>
+                <li>
+                  <a href="#rooms" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {t.nav.rooms}
+                  </a>
+                </li>
+                <li>
+                  <a href="#facilities" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {t.nav.facilities}
+                  </a>
+                </li>
+                <li>
+                  <a href="#about" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {t.nav.about}
+                  </a>
+                </li>
+                <li>
+                  <a href="#location" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {t.nav.location}
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {t.nav.contact}
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Accommodations */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider">
-              {t.footer.accommodations}
-            </h4>
-            <ul className="space-y-2 text-xs sm:text-sm">
-              <li>
-                <a href="#rooms" className="hover:text-brand-gold transition-colors">
-                  {lang === 'ar' ? 'غرفة بسريرين مفردين (Double Bed)' : 'Double Bed Room'}
-                </a>
-              </li>
-              <li>
-                <a href="#rooms" className="hover:text-brand-gold transition-colors">
-                  {lang === 'ar' ? 'غرفة بثلاثة أسرة (Triple Bed)' : 'Triple Bed Room'}
-                </a>
-              </li>
-              <li>
-                <a href="#rooms" className="hover:text-brand-gold transition-colors">
-                  {lang === 'ar' ? 'غرفة بأربعة أسرة (Four Bed)' : 'Four Bed Room'}
-                </a>
-              </li>
-              <li>
-                <a href="#rooms" className="hover:text-brand-gold transition-colors">
-                  {lang === 'ar' ? 'غرفة بخمسة أسرة (Five Bed)' : 'Five Bed Room'}
-                </a>
-              </li>
-            </ul>
-          </div>
+            {/* Box 2: Accommodations */}
+            <div className="rounded-2xl bg-white/[0.04] border border-white/10 p-5 lg:p-0 lg:rounded-none lg:bg-transparent lg:border-0 lg:col-span-3 space-y-3">
+              <div className="flex items-center gap-2 pb-2.5 mb-1 border-b border-white/10 lg:border-b-0 lg:pb-0 lg:mb-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold lg:hidden"></span>
+                <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider">
+                  {t.footer.accommodations}
+                </h4>
+              </div>
+              <ul className="space-y-2 text-xs sm:text-sm">
+                <li>
+                  <a href="#rooms" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {lang === 'ar' ? 'غرفة بسريرين مفردين (Double Bed)' : 'Double Bed Room'}
+                  </a>
+                </li>
+                <li>
+                  <a href="#rooms" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {lang === 'ar' ? 'غرفة بثلاثة أسرة (Triple Bed)' : 'Triple Bed Room'}
+                  </a>
+                </li>
+                <li>
+                  <a href="#rooms" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {lang === 'ar' ? 'غرفة بأربعة أسرة (Four Bed)' : 'Four Bed Room'}
+                  </a>
+                </li>
+                <li>
+                  <a href="#rooms" className="hover:text-brand-gold transition-colors inline-block py-0.5">
+                    {lang === 'ar' ? 'غرفة بخمسة أسرة (Five Bed)' : 'Five Bed Room'}
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Policies & Compliance */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider">
-              {t.footer.policies}
-            </h4>
-            <ul className="space-y-2 text-xs sm:text-sm">
-              <li>
-                <button
-                  type="button"
-                  onClick={onOpenPolicies}
-                  className="hover:text-brand-gold transition-colors text-left rtl:text-right"
-                >
-                  {t.footer.bookingPolicy}
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={onOpenPolicies}
-                  className="hover:text-brand-gold transition-colors text-left rtl:text-right"
-                >
-                  {t.footer.guestRules}
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={onOpenPolicies}
-                  className="hover:text-brand-gold transition-colors text-left rtl:text-right"
-                >
-                  {t.footer.privacyPolicy}
-                </button>
-              </li>
-            </ul>
+            {/* Box 3: Policies & Compliance */}
+            <div className="rounded-2xl bg-white/[0.04] border border-white/10 p-5 lg:p-0 lg:rounded-none lg:bg-transparent lg:border-0 lg:col-span-3 space-y-3">
+              <div className="flex items-center gap-2 pb-2.5 mb-1 border-b border-white/10 lg:border-b-0 lg:pb-0 lg:mb-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold lg:hidden"></span>
+                <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider">
+                  {t.footer.policies}
+                </h4>
+              </div>
+              <ul className="space-y-2 text-xs sm:text-sm">
+                <li>
+                  <button
+                    type="button"
+                    onClick={onOpenPolicies}
+                    className="hover:text-brand-gold transition-colors text-left rtl:text-right py-0.5 cursor-pointer"
+                  >
+                    {t.footer.bookingPolicy}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={onOpenPolicies}
+                    className="hover:text-brand-gold transition-colors text-left rtl:text-right py-0.5 cursor-pointer"
+                  >
+                    {t.footer.guestRules}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={onOpenPolicies}
+                    className="hover:text-brand-gold transition-colors text-left rtl:text-right py-0.5 cursor-pointer"
+                  >
+                    {t.footer.privacyPolicy}
+                  </button>
+                </li>
+              </ul>
 
-            <div className="pt-2 text-xs text-brand-sand/60 flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-brand-gold shrink-0" />
-              <span>{lang === 'ar' ? 'استفسار آمن بدون عمولات وسيطة' : 'Direct Booking without booking fees'}</span>
+              <div className="pt-2 text-xs text-brand-sand/70 flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-brand-gold shrink-0" />
+                <span>{lang === 'ar' ? 'استفسار آمن بدون عمولات وسيطة' : 'Direct Booking without booking fees'}</span>
+              </div>
             </div>
           </div>
         </div>

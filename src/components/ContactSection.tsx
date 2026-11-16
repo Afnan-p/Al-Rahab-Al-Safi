@@ -307,9 +307,12 @@ export const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <span className="block text-xs text-brand-sand/70">{t.contact.info.phoneLabel}</span>
-                    <span className="text-white font-medium dir-ltr inline-block">
+                    <a
+                      href={`tel:${BRAND_CONFIG.phoneUrl}`}
+                      className="text-white hover:text-brand-gold font-medium dir-ltr inline-block transition-colors"
+                    >
                       {BRAND_CONFIG.displayPhone}
-                    </span>
+                    </a>
                   </div>
                 </div>
 
